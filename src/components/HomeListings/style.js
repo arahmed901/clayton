@@ -57,10 +57,6 @@ export const CardsContainer = styled(motion.div)`
     cursor: pointer;
   }
 
-  @media screen and (max-width: 975px) {
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  }
-
   @media screen and (max-width: 800px) {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   }

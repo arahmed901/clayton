@@ -1,6 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Container, ListingInfo } from './style';
+import React from "react";
+import { motion } from "framer-motion";
+import { Container, ListingInfo } from "./style";
+import unavailable from "../../assets/image-unavailablepng.png";
 
 const animationVariants = {
   visible: {
@@ -10,8 +11,8 @@ const animationVariants = {
       scale: {
         stiffness: 1000,
         velocity: -100,
-      }
-    } 
+      },
+    },
   },
   hidden: {
     scale: 0.8,
@@ -19,12 +20,12 @@ const animationVariants = {
     transition: {
       scale: {
         stiffness: 1000,
-      }
-    }
+      },
+    },
   },
   hover: { scale: 1.05 },
-  tap: { scale: 0.98 }
-}
+  tap: { scale: 0.98 },
+};
 
 export default ({
   listingDetails: {
@@ -35,9 +36,8 @@ export default ({
     baths,
     sqft,
     isMultiSection,
-  }
+  },
 }) => {
-
   return (
     <motion.div
       variants={animationVariants}
@@ -49,24 +49,21 @@ export default ({
       <Container>
         <img
           src={imageURL}
+          onError={(e) => (e.currentTarget.src = unavailable)}
         />
+
         <ListingInfo>
           <h3>{homeName}</h3>
           <p className="starting-at-price">
             Starting in the ${startingPrice.toLocaleString()}s
           </p>
           <p className="listing-details">
-            {sqft.toLocaleString()} sq. ft,
-            &nbsp;{beds} beds
-            &nbsp;{baths} baths
-            {
-              isMultiSection
-                ? ' Multi Section'
-                : ''
-            }
+            {sqft.toLocaleString()} sq. ft, &nbsp;{beds} beds &nbsp;{baths}{" "}
+            baths
+            {isMultiSection ? " Multi Section" : ""}
           </p>
         </ListingInfo>
       </Container>
     </motion.div>
-  )
-}
+  );
+};

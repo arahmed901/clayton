@@ -39,10 +39,8 @@ const animationVariants = {
 };
 
 export default () => {
-  const [width, setWidth] = useState(global.innerWidth);
   const [sort, updateSort] = useState(sortValues.ASCENDING);
   const [loadCount, updateLoadCount] = useState(0);
-  const breakpoint = 500;
 
   const sortedListings = useMemo(() => {
     const sorted = listings.sort((a, b) => {
@@ -58,7 +56,7 @@ export default () => {
 
   const listingsToDisplay = useMemo(() => {
     const totalListingsCount = listings.length;
-    const initialLoadCount = width > breakpoint ? 9 : 3;
+    const initialLoadCount = 9;
     const listingsRequested =
       initialLoadCount + loadCount * loadListingInterval;
 

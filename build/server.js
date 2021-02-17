@@ -23,7 +23,7 @@ module.exports =
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "ddbf93a0845abdb47499";
+/******/ 	var hotCurrentHash = "fbce3e1a6abddc7b63eb";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -760,10 +760,10 @@ module.exports =
 /*!***************************!*\
   !*** ./build/assets.json ***!
   \***************************/
-/*! exports provided: client, default */
+/*! exports provided: client, , default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"client\":{\"js\":\"http://localhost:3001/static/js/bundle.js\"}}");
+module.exports = JSON.parse("{\"client\":{\"js\":\"http://localhost:3001/static/js/bundle.js\"},\"\":{\"png\":\"http://localhost:3001/static/media/image-unavailablepng.300f4a6f.png\"}}");
 
 /***/ }),
 
@@ -52390,6 +52390,17 @@ var HomeStyles = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_
 
 /***/ }),
 
+/***/ "./src/assets/image-unavailablepng.png":
+/*!*********************************************!*\
+  !*** ./src/assets/image-unavailablepng.png ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/image-unavailablepng.300f4a6f.png";
+
+/***/ }),
+
 /***/ "./src/assets/logo.png":
 /*!*****************************!*\
   !*** ./src/assets/logo.png ***!
@@ -52830,7 +52841,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! framer-motion */ "./node_modules/framer-motion/dist/framer-motion.es.js");
 /* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style */ "./src/components/HomeListingCard/style.js");
+/* harmony import */ var _assets_image_unavailablepng_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/image-unavailablepng.png */ "./src/assets/image-unavailablepng.png");
+/* harmony import */ var _assets_image_unavailablepng_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_image_unavailablepng_png__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/Users/lambda_school_loaner_264/Documents/clayton/src/components/HomeListingCard/HomeListingCard.js";
+
 
 
 
@@ -52887,6 +52901,9 @@ var animationVariants = {
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: imageURL,
+    onError: function onError(e) {
+      return e.currentTarget.src = _assets_image_unavailablepng_png__WEBPACK_IMPORTED_MODULE_3___default.a;
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 50
@@ -52894,26 +52911,26 @@ var animationVariants = {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_style__WEBPACK_IMPORTED_MODULE_2__["ListingInfo"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 55
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 56
     }
   }, homeName), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "starting-at-price",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 57
     }
   }, "Starting in the $", startingPrice.toLocaleString(), "s"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "listing-details",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 60
     }
-  }, sqft.toLocaleString(), " sq. ft, \xA0", beds, " beds \xA0", baths, " baths", isMultiSection ? ' Multi Section' : ''))));
+  }, sqft.toLocaleString(), " sq. ft, \xA0", beds, " beds \xA0", baths, " ", "baths", isMultiSection ? " Multi Section" : ""))));
 });
 
 /***/ }),
@@ -53171,7 +53188,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject5() {
-  var data = _babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0___default()(["\n  width: 100%;\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));\n  grid-gap: 2rem;\n  margin-top: 2.2rem;\n  margin-bottom: 2rem;\n\n  .home-listing-card {\n    height: 21rem;\n    cursor: pointer;\n  }\n\n  @media screen and (max-width: 975px) {\n    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));\n  }\n\n  @media screen and (max-width: 800px) {\n    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));\n  }\n"]);
+  var data = _babel_runtime_helpers_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0___default()(["\n  width: 100%;\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));\n  grid-gap: 2rem;\n  margin-top: 2.2rem;\n  margin-bottom: 2rem;\n\n  .home-listing-card {\n    height: 21rem;\n    cursor: pointer;\n  }\n\n  @media screen and (max-width: 800px) {\n    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -53240,13 +53257,13 @@ var CardsContainer = Object(styled_components__WEBPACK_IMPORTED_MODULE_2__["defa
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var listings = [{
-  "imageURL": "https://api.claytonhomes.com/images/MFG/EXT/f061e09d-aadd-46ec-914a-1c10239dcb5c.png?width=420&quality=70",
-  "homeName": "The Captain Jack",
-  "startingPrice": 140000,
-  "beds": 3,
-  "baths": 2,
-  "sqft": 2280,
-  "isMultiSection": true
+  imageURL: "https://api.claytonhomes.com/images/MFG/EXT/f061e09d-aadd-46ec-914a-1c10239dcb5c.png?width=420&quality=70",
+  homeName: "The Captain Jack",
+  startingPrice: 140000,
+  beds: 3,
+  baths: 2,
+  sqft: 2280,
+  isMultiSection: true
 }, {
   imageURL: "https://api.claytonhomes.com/images/MFG/EXT/2d28c61a-f3ea-42ff-bc6f-5c8df995b257.png?width=420&quality=70",
   homeName: "The Bordeaux",

@@ -9,7 +9,6 @@ const App = () => {
       <GlobalStyle />
       <Switch>
         <Route exact path="/" component={Home} />
-        this is a test
       </Switch>
     </div>
   );
